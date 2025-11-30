@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard";
 const { Content } = Layout;
 
 export default function HomePage() {
-  const { top, loading } = useTopProducts(10);
+  const { top, loading } = useTopProducts(5);
 
   const TOKENS = {
     containerMax: 1200,

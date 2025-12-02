@@ -13,7 +13,6 @@ import {
   theme,
 } from "antd";
 import {
-  PlusOutlined,
   EditOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
@@ -99,11 +98,6 @@ export default function ClientsPage() {
   const canDelete = (rec: Client) =>
     isAdmin || rec.source === "local";
 
-  function openAdd() {
-    setEditing(null);
-    form.resetFields();
-    setOpen(true);
-  }
 
   function openEdit(rec: Client) {
     setEditing(rec);
@@ -180,12 +174,6 @@ export default function ClientsPage() {
         <Title level={3} style={{ margin: 0, color: token.colorText }}>
           Clients
         </Title>
-
-        {isAdmin && (
-          <Button type="primary" icon={<PlusOutlined />} onClick={openAdd}>
-            New Client
-          </Button>
-        )}
       </Flex>
 
       <Input.Search
@@ -249,7 +237,7 @@ export default function ClientsPage() {
       />
 
       <Modal
-        title={editing ? "Edit Client" : "New Client"}
+        title={"Edit Client"}
         open={open}
         onCancel={() => setOpen(false)}
         onOk={handleOk}

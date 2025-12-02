@@ -238,7 +238,7 @@ export default function ProductsPage() {
                         src={item.image}
                         alt={item.title}
                         fallback={placeholderBase64}
-                        preview={false} // 👈 sem preview aqui
+                        preview={false}
                         style={{
                           width: "100%",
                           height: "100%",
@@ -267,15 +267,6 @@ export default function ProductsPage() {
                           allowHalf
                           style={{ fontSize: 16 }}
                         />
-                        <Text type="secondary" style={{ fontSize: 12 }}>
-                          (120)
-                        </Text>
-                        <Text
-                          type="secondary"
-                          style={{ marginLeft: "auto", fontSize: 12 }}
-                        >
-                          {item.source}
-                        </Text>
                       </Flex>
 
                       <Paragraph
